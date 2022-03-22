@@ -10,13 +10,14 @@ const Header = () => {
                     <img src={logo} alt=""/>
                 </div>
                 <div>
-                <a href="#">Order</a>
-                <a href="#">Order preview</a>
-                <a href="#">Manage inventory</a>
+                <a href="/order">Order</a>
+                <a href="/order preview">Order preview</a>
+                <a href="/manage inventory">Manage inventory</a>
                 </div>
            </div>
         </div>
     );
 };
+
 
 export default Header;
