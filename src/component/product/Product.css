@@ -1,0 +1,18 @@
+.product {
+  border: 1px solid #e5e5e5;
+  width: 300px;
+  height: 508px;
+  border-radius: 5px;
+}
+.product-img {
+  text-align: center;
+  margin-top: 7px;
+}
+.product-img img {
+  height: 286px;
+  width: 286px;
+  border-radius: 5px;
+}
+.product-text {
+  padding: 10px;
+}
