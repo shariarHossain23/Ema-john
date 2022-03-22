@@ -34,4 +34,12 @@
   background-color: #ffe0b3;
   border: none;
   padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.btn-cart:hover {
+  background-color: crimson;
+  color: #fff;
 }
