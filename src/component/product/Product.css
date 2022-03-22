@@ -31,4 +31,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  background-color: #ffe0b3;
+  border: none;
+  padding: 8px;
 }
