@@ -8,6 +8,9 @@
   gap: 10px;
   margin-top: 30px;
 }
+.order {
+  background-color: #ffe0b3;
+}
 
 @media screen and (max-width: 1200px) {
   .product-container {

@@ -6,13 +6,16 @@
   height: 80px;
   padding: 0 140px;
 }
-.header a {
+.nav-ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.header li {
   text-decoration: none;
   color: #fff;
   cursor: pointer;
   margin-left: 18px;
+  list-style: none;
+  display: flex;
   transition: 0.7s;
-}
-.header a:hover {
-  color: crimson;
 }

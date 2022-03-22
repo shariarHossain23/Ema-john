@@ -1,19 +1,19 @@
-import React from 'react';
+
 import logo from '../../images/Logo.svg';
 import './Header.css';
-
 const Header = () => {
     return (
         <div>
            <div className='header'>
-                <div>
+                <div className='logo'>
                     <img src={logo} alt=""/>
                 </div>
-                <div>
-                <a href="/order">Order</a>
-                <a href="/order preview">Order preview</a>
-                <a href="/manage inventory">Manage inventory</a>
+                <div className='nav-ul'>
+                <li href="/order">Order</li>
+                <li href="/order preview">Order preview</li>
+                <li href="/manage inventory">Manage inventory</li>
                 </div>
+                
            </div>
         </div>
     );
