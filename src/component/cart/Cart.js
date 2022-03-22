@@ -12,7 +12,6 @@ const Cart = ({cart}) => {
         Tax = parseFloat(Tax + product.price * 0.1)
         grandTotal = totalPrice + totalShipping + Tax;
     }
-    console.log(totalPrice)
     return (
         <div className='cart'>
             <h4>Order summary</h4>
