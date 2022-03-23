@@ -7,7 +7,11 @@ const Product = ({product,addToCart}) => {
     const {img,name,seller,price,ratings} = product
     return (
         <div>
-            <div className='product'>
+            <div className='product'
+           data-aos="flip-left"
+           data-aos-easing="ease-out-cubic"
+           data-aos-duration="2000"
+            >
                 <img src={img} alt = ""/>
                <div className='product-text'>
                <p className='product-name'>Name:{name}</p>

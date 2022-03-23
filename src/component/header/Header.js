@@ -1,23 +1,23 @@
-
-import logo from '../../images/Logo.svg';
-import './Header.css';
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import logo from "../../images/Logo.svg";
+import "./Header.css";
 const Header = () => {
-    return (
-        <div>
-           <div className='header'>
-                <div className='logo'>
-                    <img src={logo} alt=""/>
-                </div>
-                <div className='nav-ul'>
-                <li href="/order">Order</li>
-                <li href="/order preview">Order preview</li>
-                <li href="/manage inventory">Manage inventory</li>
-                </div>
-                
-           </div>
-        </div>
-    );
+    const [showNav,setNav] = useState(false)
+  return (
+    <div>
+      <nav className="navbar-nab">
+          <img className="nav-logo" src={logo} alt =""></img>
+        <ul className={showNav ? "nav-item-show":"nav-item"}>
+          <li><a href="/order">Order</a></li>
+          <li> <a href="/order-preview"> Order preview</a></li>
+          <li> <a href="/manage">Manage inventory</a></li>
+        </ul>
+    <FontAwesomeIcon onClick={()=> setNav(!showNav)} className="icon" icon={faBars}></FontAwesomeIcon>
+      </nav>
+    </div>
+  );
 };
-
 
 export default Header;

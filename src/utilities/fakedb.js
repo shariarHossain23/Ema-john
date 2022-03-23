@@ -19,7 +19,6 @@ const addTodb = (id) => {
 const getData = () => {
   let shoppingCart = {};
   const sortCart = localStorage.getItem("shopping-cart");
-  console.log(sortCart)
   if (sortCart) {
     shoppingCart = JSON.parse(sortCart);
   }
