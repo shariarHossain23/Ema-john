@@ -4,11 +4,12 @@ import Cart from '../cart/Cart';
 import Product from '../product/Product';
 import './Shop.css';
 
+
 const Shop = () => {
     const [products,setProducts] = useState([]);
     const [cart,setCart] = useState([])
     useEffect( () =>{
-        fetch('products.json')
+        fetch('./products.json')
         .then(res=> res.json())
         .then(data => setProducts(data))
     }, []);
@@ -25,7 +26,7 @@ const Shop = () => {
         }
         setCart(saveProduct)
    },[products])
-    
+    console.log(products)
    const addToCart = (selectProduct) => {
        let newCart = [];
        const exist = cart.find(product => product.id === selectProduct.id);
@@ -53,7 +54,9 @@ const Shop = () => {
             <div className='order'>
                <Cart cart = {cart}></Cart>
             </div>
+          
         </div>
+
     );
 };
 
