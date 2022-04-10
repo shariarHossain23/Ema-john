@@ -7,21 +7,29 @@
   padding: 0 120px;
 }
 
-.nav-item {
+/* .nav-item {
   display: flex;
-}
-.nav-item li {
+} */
+.menu-list {
   color: #fff;
   list-style: none;
   margin-left: 20px;
   font-size: 18px;
+  text-decoration: none;
+  border: none;
 }
 .nav-item li a {
   color: #fff;
   list-style: none;
   text-decoration: none;
 }
-
+.log-out-btn {
+  margin-left: 20px;
+  font-size: 18px;
+  border: none;
+  background-color: #1c2b35;
+  color: #fff;
+}
 .icon {
   color: #fff;
   font-size: 20px;
@@ -36,6 +44,9 @@
   }
   .nav-item {
     display: none;
+  }
+  .menu-list {
+    flex-direction: column;
   }
   .nav-item-show {
     flex-direction: column;

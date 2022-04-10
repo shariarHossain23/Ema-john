@@ -1,20 +1,35 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { signOut } from "firebase/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 import logo from "../../images/Logo.svg";
 import "./Header.css";
 const Header = () => {
-    const [showNav,setNav] = useState(false)
+  const [user] = useAuthState(auth);
+  const logout = () => {
+    signOut(auth);
+  };
   return (
     <div>
       <nav className="navbar-nab">
-          <img className="nav-logo" src={logo} alt =""></img>
-        <ul className={showNav ? "nav-item-show":"nav-item"}>
-          <li><a href="/order">Order</a></li>
-          <li> <a href="/order-preview"> Order preview</a></li>
-          <li> <a href="/manage">Manage inventory</a></li>
-        </ul>
-    <FontAwesomeIcon onClick={()=> setNav(!showNav)} className="icon" icon={faBars}></FontAwesomeIcon>
+        <img className="nav-logo" src={logo} alt=""></img>
+        <div className="">
+          <ul>
+            <Link className="menu-list" to="/order">
+              Order
+            </Link>
+            <Link className="menu-list" to="/order-preview">
+              Order preview
+            </Link>
+            <Link className="menu-list" to="/inventory">
+              Manage inventory
+            </Link>
+            { user?<button className="log-out-btn" onClick={()=>logout()}>Logout</button>
+              :
+              <Link className="menu-list" to='/login'>Login</Link>
+            }
+          </ul>
+        </div>
       </nav>
     </div>
   );

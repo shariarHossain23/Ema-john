@@ -24,5 +24,19 @@ const getData = () => {
   }
   return shoppingCart;
 };
-export { addTodb, getData };
+
+  const removeItem = id => {
+    const storeCart = localStorage.getItem("shopping-cart")
+    if(storeCart){
+     const shoppingCart = JSON.parse(storeCart);
+     if(id in shoppingCart){
+       delete shoppingCart[id]
+       localStorage.setItem("shopping-cart",JSON.stringify(shoppingCart))
+     }
+    }
+  }
+  const removeShoppingCart = () =>{
+    localStorage.removeItem("shopping-cart")
+  }
+export { addTodb, getData, removeItem, removeShoppingCart };
 
