@@ -8,19 +8,18 @@ import Preview from "../Preview/Preview";
 import './overview.css';
 const OrderPreview = () => {
   const [products] = useProduct();
-  const [cart,setCart] = useCart(products);
+  const [cart,setCart] = useCart();
   const deleteItem = (product) => {
-    console.log(product);
-    const rest = cart.filter(pd => pd.id !== product.id)
+    const rest = cart.filter(pd => pd._id !== product._id)
     setCart(rest)
-    removeItem(product.id)
+    removeItem(product._id)
   }
  
   return (
     <div className="product-container">
       <div className="review-items-container">
           {
-              cart.map(product => <Preview key={product.id} product = {product} deleteItem={deleteItem}></Preview>)
+              cart.map(product => <Preview key={product._id} product = {product} deleteItem={deleteItem}></Preview>)
           }
       </div>
       <div className="order">

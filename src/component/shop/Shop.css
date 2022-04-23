@@ -11,7 +11,18 @@
 .order {
   background-color: #ffe0b3;
 }
-
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.pagination button {
+  margin-right: 10px;
+  border: 1px solid orange;
+}
+.pagination .selected {
+  background-color: orange;
+  color: #fff;
+}
 @media screen and (max-width: 1200px) {
   .product-container {
     display: grid;
